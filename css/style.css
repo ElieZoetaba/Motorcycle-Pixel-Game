@@ -1,0 +1,108 @@
+.wrapper{}
+
+.Main_page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+body{
+    background: url("../img/Background_MainPage.gif") no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+.Title{
+    padding-top: 40px;
+    font-size: 45px;
+    height: 0px;
+}
+.version_text{
+    padding-top: 20px;
+    opacity: 0.4;
+}
+.About_game{
+    font-size: 25px;
+}
+.select_language{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.text_selectLanguage{
+    font-size: 18px;
+}
+#select_language{
+    margin-left: 10px;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    color: #333;
+    font-size: 16px;
+    height: 25px;
+}
+.Eng{
+    font-size: 19px;
+    max-width: 700px;
+}
+.Eng_Hidden{
+    display: none;
+}
+.Ukr{
+    display: none;
+}
+.Ru{
+    display: none;
+}
+.UkrainianText_select{
+    font-size: 19px;
+    max-width: 700px;
+}
+.RussianText_select{
+    font-size: 19px;
+    max-width: 700px;
+}
+
+
+
+/*Adaptive*/
+
+@media only screen and (max-width: 473px) {
+.Title{
+    font-size: 30px;
+}
+}
+
+@media only screen and (max-width: 323px) {
+    .Title{
+        font-size: 25px;
+    }
+}
+@media only screen and (max-width: 270px) {
+    .Title{
+        font-size: 20px;
+    }
+}
+
+.Play_Game {
+    width: 120px;
+    height: 50px;
+    text-decoration: none;
+    display: inline-block;
+
+    margin-top: 15px;
+    margin-bottom: 5px;
+    border-radius: 30px;
+    background-color: rgba(7, 235, 247, 1.0);
+    background-position: 100% 0;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 10px 7px 0 rgba(0, 40, 120, .35);
+    transition: .5s;
+    border: 0px;
+}
+.Play_Game:hover {
+    box-shadow: 0 0 0 0 rgba(0, 40, 120, 0);
+    background-position: 0 0;
+}
