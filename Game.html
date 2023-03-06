@@ -1,0 +1,36 @@
+<!-- !-- Сообщаем браузеру как стоит обрабатывать эту страницу -->
+<!DOCTYPE html>
+<!-- Оболочка документа, указываем язык содержимого -->
+<html lang="en">
+	<!-- Заголовок страницы, контейнер для других важных данных (не отображается) -->
+	<head>
+		<!-- Заголовок страницы в браузере -->
+		<title>Motorcycle Game</title>
+		<!-- Подключаем CSS -->
+		<link rel="stylesheet" href="css/style_game.css">
+		<!-- Кодировка страницы -->
+		<meta charset="UTF-8">
+		<!-- Адаптив -->
+		<meta name="viewport" content="width=device-width initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	</head>
+	<!-- Отображаемое тело страницы -->
+	<body>
+
+	<div class="game">
+		<div class="motorcycle" id="motorcycle"></div>
+		<div class="cactus" id="cactus"></div>
+	</div>
+	<div class="EndBlock">
+		<p class="gameOver_text">Game Over!</p>
+		<button class="RestartGame">Restart</button>
+	</div>
+
+	<div class="score_block">
+	<p class="score_text">Score: <p class="score"></p></p>
+	</div>
+	<div class="HomePage_block">
+		<a class="Home_link" href="index.html"><button class="Home_btn">Home Page</button></a>
+	</div>
+	<script src="js/script_game.js"></script>
+	</body>
+	</html>

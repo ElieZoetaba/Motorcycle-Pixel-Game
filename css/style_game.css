@@ -1,0 +1,166 @@
+@font-face {
+    font-family: "Pixel_Font";
+    src: url("../fonts/Pixel_font.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.game{
+    width: 800px;
+    height: 200px;
+    border-bottom: 1px solid #000;
+    margin: auto;
+}
+.motorcycle {
+    width: 200px;
+    height: 200px;
+    background-image: url(../img/Motorcycle.gif);
+    background-size: 200px 200px;
+    position: relative;
+    top: 73px;
+}
+.motorcycle_stop {
+    width: 200px;
+    height: 200px;
+    background-image: url(../img/Motorcycle_stop.png);
+    background-size: 200px 200px;
+    position: relative;
+    top: 73px;
+}
+#cactus {
+    width: 40px;
+    height: 45px;
+    background-image: url(../img/Cactus_object.png);
+    background-size: 40px 45px;
+    position: relative;
+    bottom: 45px;
+    left: 750px;
+    animation: cactusAnimation 1.3s infinite linear;
+}
+
+@keyframes cactusAnimation {
+    0% {
+        left: 750px;
+    }
+    100% {
+        left: -20px;
+    }
+}
+
+.jump {
+    animation: jump 0.3s ease-in-out;
+    top: -100px;
+}
+
+@keyframes jump {
+    0% {
+        top: 0px;
+    }
+    50% {
+        top: -105px;
+    }
+    100% {
+        top: 0px;
+    }
+}
+
+.score_block{
+    font-family: Pixel_Font, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.score{
+    padding-left: 5px;
+}
+
+.game_over{
+    display: none;
+}
+.gameOver_text{
+    font-family: Pixel_Font, sans-serif;
+}
+.EndBlock{
+    display: none;
+}
+.Game_Over{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.RestartGame{
+    font-family: Pixel_Font, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.RestartGame {
+    width: 90px;
+    height: 30px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    border-radius: 30px;
+    background-color: rgba(230,0,35,1);
+    background-position: 100% 0;
+    font-size: 18px;
+    color: white;
+    box-shadow: 0 4px 10px 0 rgba(0, 40, 120, .35);
+    transition: .5s;
+    border: 0px;
+}
+.RestartGame:hover {
+    box-shadow: 0 0 0 0 rgba(0, 40, 120, 0);
+    background-position: 0 0;
+}
+
+
+
+.HomePage_block{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.Home_link{
+text-decoration: none;
+    color: white;
+
+
+}
+.Home_btn{
+
+}
+
+.Home_btn {
+    font-family: Pixel_Font, sans-serif;
+    width: 120px;
+    height: 40px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    border-radius: 30px;
+    background-color: rgb(255,127,80, 1);
+    background-position: 100% 0;
+    font-size: 18px;
+    color: white;
+    box-shadow: 0 1px 7px 0 rgba(0, 40, 120, .35);
+    transition: .5s;
+    border: 0px;
+}
+.Home_btn:hover {
+    box-shadow: 0 0 0 0 rgba(0, 40, 120, 0);
+    background-position: 0 0;
+}
+

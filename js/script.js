@@ -31,8 +31,4 @@ selectLanguage.addEventListener('change', function (){
     }
 })
 
-let playGame_button = document.querySelector('.Play_Game')
 
-playGame_button.addEventListener('click', function (){
-    alert("Wait for the next version to play!")
-})
