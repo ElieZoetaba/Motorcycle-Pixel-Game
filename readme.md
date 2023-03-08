@@ -3,7 +3,7 @@
 Demo - https://vladosdc.github.io/Motorcycle-Pixel-Game/
 
 Infinite pixel ranner.
-You play as a motorcycle, your task is to jump/dodge obstacles.
+You play as a motorcycle, your task is to jump obstacles.
 Follow the versions of the game!
 
 
@@ -13,14 +13,16 @@ Follow the versions of the game!
 
 1.1 - Main page changes (font, bug fixes), additions to the game itself. 
 
-_1.2 - Adding even more logic to the game, (**in development**)_
+1.2 - Adding more logic (speeding up the game, the score counter accelerates along with the game), adding new obstacles, music, sound effects.
+
+_1.3 - Adding new obstacles as well as adapting to different screens of devices (**in development**)_
 
 # Український Переклад
 ## Піксельна гра мотоцикл
 Демо - https://vladosdc.github.io/Motorcycle-Pixel-Game/
 
 Нескінченний піксельний ранер.
-Ви граєте за мотоцикл, ваше завдання - стрибати/ухилятися від перешкод.
+Ви граєте за мотоцикл, ваше завдання - стрибати через перешкоди.
 Слідкуйте за версіями гри!
 
 
@@ -30,14 +32,16 @@ _1.2 - Adding even more logic to the game, (**in development**)_
 
 1.1 - Зміни головної сторінки (шрифт, виправлення помилок), додавання самої гри.
 
-_1.2 - Додавання ще більшої логіки в гру, (**в розробці**)_
+1.2 - Додавання більшої логіки (прискорення гри, лічильник очок прискорюється разом з грою), додавання нових перешкод, музики, звукових ефектів.
+
+_1.3 - Додавання нових перешкод, а також адаптація до різних екранів пристроїв (**у розробці**)_
 
 # Русский перевод
 ## Пиксельная игра мотоцикл
 Демо - https://vladosdc.github.io/Motorcycle-Pixel-Game/
 
 Бесконечный пиксельный раннер.
-Вы играете за мотоцикл, ваша задача - прыгать/уклоняться от препятствий.
+Вы играете за мотоцикл, ваша задача - прыгать через препятствия.
 Следите за версиями игры!
 
 
@@ -47,4 +51,6 @@ _1.2 - Додавання ще більшої логіки в гру, (**в ро
 
 1.1 - Изменения главной страницы (шрифт, исправление ошибок), добавления самой игры.
 
-_1.2 - Добавление еще большей логики в игру, (**в разработке**)_
+1.2 - Добавление большей логики (ускорение игры, счетчик очков ускоряется вместе с игрой), добавление новых препятствий, музыки, звуковых эффектов.
+
+_1.3 - Добавление новых препятствий, а также адаптация к различным экранам устройств (**в разработке**)_

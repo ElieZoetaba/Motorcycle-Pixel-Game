@@ -7,6 +7,7 @@
 
 body {
     overflow-x: hidden;
+
 }
 
 .game{
@@ -31,7 +32,17 @@ body {
     position: relative;
     top: 73px;
 }
-#cactus {
+
+.obstacles{
+    width: 40px;
+    height: 45px;
+    background-size: 40px 45px;
+    position: relative;
+    bottom: 45px;
+    left: 750px;
+}
+
+.obstacles_1 {
     width: 40px;
     height: 45px;
     background-image: url(../img/Cactus_object.png);
@@ -39,10 +50,30 @@ body {
     position: relative;
     bottom: 45px;
     left: 750px;
-    animation: cactusAnimation 1.3s infinite linear;
+    animation: obstaclesAnimation 1.3s infinite linear;
+}
+.obstacles_2 {
+    width: 78px;
+    height: 54px;
+    background-image: url(../img/Cactus2_object.png);
+    background-size: 78px 54px;
+    position: relative;
+    bottom: 50px;
+    left: 750px;
+    animation: obstaclesAnimation 1.3s infinite linear;
+}
+.obstacles_3 {
+    width: 75px;
+    height: 40px;
+    background-image: url(../img/Car_object.png);
+    background-size: 75px 40px;
+    position: relative;
+    bottom: 40px;
+    left: 750px;
+    animation: obstaclesAnimation 1.3s infinite linear;
 }
 
-@keyframes cactusAnimation {
+@keyframes obstaclesAnimation {
     0% {
         left: 750px;
     }
@@ -50,6 +81,8 @@ body {
         left: -20px;
     }
 }
+
+
 
 .jump {
     animation: jump 0.3s ease-in-out;
@@ -124,6 +157,80 @@ body {
 }
 
 
+/*Sound Control*/
+.MusicControl_{
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.switch_anime {
+    margin-left: 5px;
+    margin-top: 0;
+}
+
+.switch_anime {
+    position: relative;
+    display: inline-block;
+    width: 45px;
+    height: 20px;
+}
+
+.switch_anime input {display:none;}
+
+.slideranime {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slideranime:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 4px;
+    bottom: 3px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slideranime {
+    background-color: hotpink;
+}
+
+input:focus + .slideranime {
+    box-shadow: 0 0 1px hotpink;
+}
+
+input:checked + .slideranime:before {
+    -webkit-transform: translateX(23px);
+    -ms-transform: translateX(23px);
+    transform: translateX(23px);
+}
+
+.slideranime.roundanime {
+    border-radius: 34px;
+}
+
+.slideranime.roundanime:before {
+    border-radius: 50%;
+}
+
+
+
+
+
+
+
 
 .HomePage_block{
     display: flex;
@@ -163,4 +270,5 @@ text-decoration: none;
     box-shadow: 0 0 0 0 rgba(0, 40, 120, 0);
     background-position: 0 0;
 }
+
 
