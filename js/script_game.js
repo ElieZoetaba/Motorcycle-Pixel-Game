@@ -7,7 +7,7 @@ document.addEventListener("keydown", function (event) {
         jump();
         //add jump sound
         jumpSound = new Audio()
-        jumpSound.src = '/sounds/jump_moto.mp3'
+        jumpSound.src = './sounds/jump_moto.mp3'
         jumpSound.volume = 0.3
         jumpSound.play()
     }
@@ -17,7 +17,7 @@ document.addEventListener("keydown", function (event) {
 //Music ("Them Bones" by Alice in Chains)
 
 Music = new Audio()
-Music.src = '/sounds/Music.mp3'
+Music.src = './sounds/Music.mp3'
 Music.volume = 0.1
 Music.addEventListener('ended', function() {
     this.currentTime = 0;
@@ -62,7 +62,7 @@ let Logic = setInterval( function (){
 
         //sound game over
         let Game_Over_sound = new Audio();
-        Game_Over_sound.src = '/sounds/Game_Over.mp3';
+        Game_Over_sound.src = './sounds/Game_Over.mp3';
         Game_Over_sound.volume = 0.2;
         Game_Over_sound.play();
         clearTimeout(ObjTimeout)
