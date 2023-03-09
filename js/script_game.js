@@ -1,6 +1,8 @@
 const motorcycle = document.getElementById('motorcycle')
 const obstacles = document.getElementById('obstacles')
 let gameover = document.querySelector('.EndBlock')
+let jumpBtn_block = document.querySelector('.jumpBtn_block')
+let jumpBtn = document.querySelector('.jump_btn')
 let isGameOver = false;
 document.addEventListener("keydown", function (event) {
     if (event.code === "Space" && !isGameOver) {
@@ -27,14 +29,14 @@ Music.play()
 
 
 //Random obstacles
-let randomObstacles = ['obstacles_1', 'obstacles_2', 'obstacles_3']
+let randomObstacles = ['obstacles_1', 'obstacles_2', 'obstacles_3', 'obstacles_4', 'obstacles_5', 'obstacles_6', 'obstacles_7']
 let ObjTimeout
 
 function changeObstacles() {
     let randomIndex = Math.floor(Math.random() * randomObstacles.length)
     let randomObject = randomObstacles[randomIndex]
     let block_obstacles = document.querySelector('.obstacles')
-    block_obstacles.classList.remove('obstacles_1', 'obstacles_2', 'obstacles_3')
+    block_obstacles.classList.remove('obstacles_1', 'obstacles_2', 'obstacles_3', 'obstacles_4', 'obstacles_5', 'obstacles_6', 'obstacles_7')
     block_obstacles.classList.add(randomObject)
     ObjTimeout = setTimeout(changeObstacles, 1300)
 }
@@ -65,11 +67,12 @@ let Logic = setInterval( function (){
         Game_Over_sound.src = './sounds/Game_Over.mp3';
         Game_Over_sound.volume = 0.2;
         Game_Over_sound.play();
-        clearTimeout(ObjTimeout)
+        clearTimeout(ObjTimeout);
         clearInterval(Logic);
         gameover.classList.add('Game_Over')
         obstacles.style.animationPlayState = "paused";
         motorcycle.classList.add('motorcycle_stop');
+        jumpBtn_block.style.display = 'none';
 
         //stop jump sound
         Music.pause()
@@ -116,7 +119,7 @@ let scoreInterval = setInterval(function() {
     count++;
     score.innerHTML = count;
 
-    if (count === 211) {
+    if (count === 181) {
         obstacles.style.setProperty('animation-duration', '1.2s');
         //speed up the counter
         scoreUp1 = setInterval(function() {
@@ -124,7 +127,7 @@ let scoreInterval = setInterval(function() {
             score.innerHTML = count;
         }, 119);
     }
-    if (count === 800) {
+    if (count === 661) {
         obstacles.style.setProperty('animation-duration', '1.1s');
         scoreUp2 = setInterval(function() {
             count++;
@@ -132,7 +135,7 @@ let scoreInterval = setInterval(function() {
 
         }, 115);
     }
-    if (count === 1400) {
+    if (count === 1411) {
         obstacles.style.setProperty('animation-duration', '1s');
         scoreUp3 = setInterval(function() {
             count++;
@@ -140,7 +143,7 @@ let scoreInterval = setInterval(function() {
 
         }, 110);
     }
-    if (count === 2000) {
+    if (count === 2011) {
         obstacles.style.setProperty('animation-duration', '0.97s');
         scoreUp4 = setInterval(function() {
             count++;
@@ -148,7 +151,7 @@ let scoreInterval = setInterval(function() {
 
         }, 105);
     }
-    if (count === 5000) {
+    if (count === 3011) {
         obstacles.style.setProperty('animation-duration', '0.94s');
         scoreUp5 = setInterval(function() {
             count++;
@@ -156,7 +159,7 @@ let scoreInterval = setInterval(function() {
 
         }, 95);
     }
-    if (count === 8000) {
+    if (count === 4011) {
         obstacles.style.setProperty('animation-duration', '0.90s');
         scoreUp6 = setInterval(function() {
             count++;
@@ -164,7 +167,7 @@ let scoreInterval = setInterval(function() {
 
         }, 93);
     }
-    if (count === 8200) {
+    if (count === 5011) {
         obstacles.style.setProperty('animation-duration', '0.88s');
         scoreUp7 = setInterval(function() {
             count++;
@@ -183,4 +186,11 @@ RestartButton.addEventListener('click', function (){
     location.reload()
 })
 
-
+//button jump for touchscreen devices
+jumpBtn.addEventListener('click', function (){
+    jump();
+    jumpSound = new Audio()
+    jumpSound.src = './sounds/jump_moto.mp3'
+    jumpSound.volume = 0.3
+    jumpSound.play()
+})

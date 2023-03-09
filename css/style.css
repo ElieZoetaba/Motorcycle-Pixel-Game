@@ -4,6 +4,12 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: "Cyrillic_Font";
+    src: url("../fonts/Cyrillic_Font.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
 
 
 .wrapper{}
@@ -19,6 +25,7 @@ body{
     background: url("../img/Background_MainPage.gif") no-repeat center center fixed;
     background-size: cover;
     color: white;
+    touch-action: manipulation;
 }
 .Title{
     font-family: Pixel_Font, sans-serif;
@@ -70,13 +77,13 @@ body{
     display: none;
 }
 .UkrainianText_select{
-    font-family: Pixel_Font, sans-serif;
-    font-size: 19px;
+    font-family: Cyrillic_Font, sans-serif;
+    font-size: 18px;
     max-width: 700px;
 }
 .RussianText_select{
-    font-family: Pixel_Font, sans-serif;
-    font-size: 19px;
+    font-family: Cyrillic_Font, sans-serif;
+    font-size: 18px;
     max-width: 700px;
 }
 
@@ -142,5 +149,11 @@ body{
 @media only screen and (max-width: 255px) {
     .Title{
         font-size: 17px;
+    }
+}
+
+@media only screen and (max-width: 213px) {
+    .Title{
+        font-size: 12px;
     }
 }

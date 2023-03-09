@@ -7,7 +7,7 @@
 
 body {
     overflow-x: hidden;
-
+    touch-action: manipulation;
 }
 
 .game{
@@ -15,6 +15,18 @@ body {
     height: 200px;
     border-bottom: 1px solid #000;
     margin: auto;
+}
+.Message_deviceNotSupport{
+    display: none;
+}
+.jumpBtn_block {
+    display: none;
+}
+.home_pageBtn{
+    display: none;
+}
+.homePage_deviceNotSupport{
+    display: none;
 }
 .motorcycle {
     width: 200px;
@@ -72,7 +84,46 @@ body {
     left: 750px;
     animation: obstaclesAnimation 1.3s infinite linear;
 }
-
+.obstacles_4 {
+    width: 60px;
+    height: 45px;
+    background-image: url(../img/crystal_object.png);
+    background-size: 60px 45px;
+    position: relative;
+    bottom: 40px;
+    left: 750px;
+    animation: obstaclesAnimation 1.3s infinite linear;
+}
+.obstacles_5 {
+    width: 55px;
+    height: 50px;
+    background-image: url(../img/trashСan_object.png);
+    background-size: 55px 50px;
+    position: relative;
+    bottom: 43px;
+    left: 750px;
+    animation: obstaclesAnimation 1.3s infinite linear;
+}
+.obstacles_6 {
+    width: 55px;
+    height: 45px;
+    background-image: url(../img/fireTrashСan_object.png);
+    background-size: 55px 45px;
+    position: relative;
+    bottom: 45px;
+    left: 750px;
+    animation: obstaclesAnimation 1.3s infinite linear;
+}
+.obstacles_7 {
+    width: 50px;
+    height: 40px;
+    background-image: url(../img/bitcoin_object.png);
+    background-size: 50px 40px;
+    position: relative;
+    bottom: 40px;
+    left: 750px;
+    animation: obstaclesAnimation 1.3s infinite linear;
+}
 @keyframes obstaclesAnimation {
     0% {
         left: 750px;
@@ -157,80 +208,6 @@ body {
 }
 
 
-/*Sound Control*/
-.MusicControl_{
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-}
-
-.switch_anime {
-    margin-left: 5px;
-    margin-top: 0;
-}
-
-.switch_anime {
-    position: relative;
-    display: inline-block;
-    width: 45px;
-    height: 20px;
-}
-
-.switch_anime input {display:none;}
-
-.slideranime {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    -webkit-transition: .4s;
-    transition: .4s;
-}
-
-.slideranime:before {
-    position: absolute;
-    content: "";
-    height: 14px;
-    width: 14px;
-    left: 4px;
-    bottom: 3px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
-}
-
-input:checked + .slideranime {
-    background-color: hotpink;
-}
-
-input:focus + .slideranime {
-    box-shadow: 0 0 1px hotpink;
-}
-
-input:checked + .slideranime:before {
-    -webkit-transform: translateX(23px);
-    -ms-transform: translateX(23px);
-    transform: translateX(23px);
-}
-
-.slideranime.roundanime {
-    border-radius: 34px;
-}
-
-.slideranime.roundanime:before {
-    border-radius: 50%;
-}
-
-
-
-
-
-
-
 
 .HomePage_block{
     display: flex;
@@ -243,9 +220,6 @@ input:checked + .slideranime:before {
 text-decoration: none;
     color: white;
 
-
-}
-.Home_btn{
 
 }
 
@@ -272,3 +246,89 @@ text-decoration: none;
 }
 
 
+/*Adaptive*/
+
+@media only screen and (max-width: 1000px) {
+.jumpBtn_block{
+    display: flex;
+    align-items: end;
+    justify-content: end;
+
+}
+
+    .jump_btn {
+        font-family: Pixel_Font, sans-serif;
+        width: 120px;
+        height: 50px;
+        text-decoration: none;
+        display: inline-block;
+
+        margin-top: 15px;
+        margin-bottom: 5px;
+        border-radius: 30px;
+        background-color: rgb(72,72,72, 1.0);
+        background-position: 100% 0;
+        font-size: 18px;
+        color: white;
+        font-weight: bold;
+        transition: .5s;
+        border: 0px;
+    }
+
+}
+
+
+@media only screen and (max-width: 500px) {
+    body * {
+        display: none;
+    }
+    .Message_deviceNotSupport{
+        font-family: Pixel_Font, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 120px;
+        font-size: 16px;
+        color: red;
+        text-align: center;
+        font-weight: bold;
+
+    }
+    .jumpBtn_block{
+        display: none;
+    }
+    .homePage_deviceNotSupport{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .home_pageBtn{
+        display: flex;
+    }
+    .HomePageBtn_link{
+        display: flex;
+        text-decoration: none;
+    }
+
+    .home_pageBtn {
+        font-family: Pixel_Font, sans-serif;
+        width: 120px;
+        height: 40px;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 40px;
+        border-radius: 30px;
+        background-color: rgb(255,127,80, 1);
+        background-position: 100% 0;
+        font-size: 18px;
+        color: white;
+        box-shadow: 0 1px 7px 0 rgba(0, 40, 120, .35);
+        transition: .5s;
+        border: 0px;
+    }
+    .home_pageBtn:hover {
+        box-shadow: 0 0 0 0 rgba(0, 40, 120, 0);
+        background-position: 0 0;
+    }
+
+}
